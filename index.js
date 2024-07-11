@@ -1,27 +1,39 @@
+
 var customerName = 'bob';
-var bestCustomer;
+
 function upperCaseCustomerName() {
-    console.log (customerName.toUpperCase());
-  }
-  
-  console.log(upperCaseCustomerName());
-  function setBestCustomer() {
-    bestCustomer = 'not bob';
-  }
-  
-  setBestCustomer();
+  customerName= customerName.toUpperCase();
+}
 
-  console.log(bestCustomer);
-  function overwriteBestCustomer() {
+
+
+
+var bestCustomer; // Declaring bestCustomer in global scope
+
+function setBestCustomer() {
+    bestCustomer = 'not bob'; // Setting the value of bestCustomer
+}
+
+
+
+
+function overwriteBestCustomer() {
     bestCustomer = 'maybe bob';
-  }
-  
-  overwriteBestCustomer();
-  console.log(bestCustomer); 
-  const leastFavoriteCustomer = 'Alice';
-  const changeleastFavoriteCustomer = 'Alice';
+}
 
-  function changeLeastFavoriteCustomer() {
+
+const leastFavoriteCustomer = 'Alice'; // Declaring a constant
+
+function changeLeastFavoriteCustomer() {
+    leastFavoriteCustomer = 'john'; // Attempting to change the constant
+}
+
+module.exports={
+  upperCaseCustomerName,
+  setBestCustomer,
+  overwriteBestCustomer,
+  changeLeastFavoriteCustomer
+
+};
+
   
-    leastFavoriteCustomer = 'Bob';
-  }
