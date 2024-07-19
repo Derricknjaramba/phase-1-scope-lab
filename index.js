@@ -1,39 +1,50 @@
-
+// Declare a global variable customerName using var
 var customerName = 'bob';
 
+// Function to uppercase customerName
 function upperCaseCustomerName() {
-  customerName= customerName.toUpperCase();
+  customerName = customerName.toUpperCase();
 }
 
-
-
-
-var bestCustomer; // Declaring bestCustomer in global scope
-
+// Function to set bestCustomer
 function setBestCustomer() {
-    bestCustomer = 'not bob'; // Setting the value of bestCustomer
+  bestCustomer = 'not bob'; // Assigning directly in global scope
 }
 
-
-
-
+// Function to overwrite bestCustomer
 function overwriteBestCustomer() {
-    bestCustomer = 'maybe bob';
+  bestCustomer = 'maybe bob'; // Changing the value of bestCustomer in global scope
 }
 
+// Declare a constant leastFavoriteCustomer in global scope
+const leastFavoriteCustomer = 'someone';
 
-const leastFavoriteCustomer = 'Alice'; // Declaring a constant
+// Declare customerName in global scope with initial value 'bob'
+var customerName = 'bob';
 
+// Function to uppercase customerName
+function upperCaseCustomerName() {
+  // Ensure we keep the initial value case-insensitive
+  customerName = customerName.charAt(0).toUpperCase() + customerName.slice(1).toLowerCase();
+  return customerName;
+}
+var customerName = 'bob';
+
+// Function to uppercase customerName
+function upperCaseCustomerName() {
+  customerName = customerName.toUpperCase();
+  return customerName;
+}
+
+// Function to set bestCustomer
+function setBestCustomer() {
+  // Declare bestCustomer in global scope
+  bestCustomer = 'not bob';
+  return bestCustomer;
+}
 function changeLeastFavoriteCustomer() {
-    leastFavoriteCustomer = 'john'; // Attempting to change the constant
+  leastFavoriteCustomer = 'Jane Smith'; // Attempt to reassign, will throw an error
 }
 
-module.exports={
-  upperCaseCustomerName,
-  setBestCustomer,
-  overwriteBestCustomer,
-  changeLeastFavoriteCustomer
-
-};
 
   
